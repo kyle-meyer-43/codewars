@@ -63,3 +63,48 @@ const rps = (p1, p2) => {
     return "Draw!";
 };
 
+// Other solutions I liked from solutions page:
+
+
+// using conditional in interesting way:
+
+// const rps = (p1, p2) => {
+//     if (p1 === p2) return "Draw!";
+//     var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+//     if (p2 === rules[p1]) {
+//       return "Player 1 won!";
+//     }
+//     else {
+//       return "Player 2 won!";
+//     }
+//   };
+
+// --------------------------------------------
+
+// More traditional conditionals. This one is what i was going for original, but with the proper syntax so it works
+
+// const rps = (p1, p2) => {
+//     if (p1 == p2)
+//       return 'Draw!';
+      
+//      if (p1 == 'rock' && p2 == 'scissors') 
+//        return 'Player 1 won!'
+//      else if (p1 == 'scissors' && p2 == 'paper') 
+//        return 'Player 1 won!'
+//      else if (p1 == 'paper' && p2 == 'rock') 
+//        return 'Player 1 won!'
+//      else
+//        return 'Player 2 won!';
+//   };
+
+// --------------------------------------------
+
+// way of doing it with conditionals that is more concise and readable:
+
+// const rps = (p1, p2) => {
+//     if (p1 === p2) return 'Draw!';
+//     if (p1 === 'rock' && p2 === 'scissors') return 'Player 1 won!';
+//     if (p1 === 'scissors' && p2 === 'paper') return 'Player 1 won!';
+//     if (p1 === 'paper' && p2 === 'rock') return 'Player 1 won!';
+//     return 'Player 2 won!';
+//   };
