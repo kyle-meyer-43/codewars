@@ -12,3 +12,19 @@
 
 // Pseudo code: conditional statments? would work to display which "card" (play) won, but not which player made the play
 
+const rps = (p1, p2) => {
+    if p1 === 'rock' && p2 === 'scissors'{
+        console.log('p1 wins!')
+    }else if p1 === 'scissors' && p2 === 'paper'{
+        console.log('p1 wins!')
+    }else if p1 === 'paper' && p2 === 'rock'{
+        console.log('p1 wins!')
+    }else if p1 === 'scissors' && p2 === 'rock'{
+        console.log('p2 wins!')
+    }else if p1 === 'rock' && p2 === 'paper'{
+        console.log('p2 wins!')
+    }else if p1 === 'paper' && p2 === 'scissors'{
+        console.log('p2 wins!')
+    }else console.log('Draw!')
+    
+}   
