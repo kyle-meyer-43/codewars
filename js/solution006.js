@@ -14,3 +14,28 @@ function boolToWord(bool){
 else if(bool==false) 
     return "No"
 }
+
+// ----------------------------------------------
+// Alternate solutions I liked on solutions page:
+
+// Nice sympol and actually uses boolean:
+
+function boolToWord(bool){
+    return bool ? 'Yes':'No';
+}
+
+// ----------------------------------------------
+// Better looking conditional:
+
+function boolToWord(bool){
+    if (bool){
+        return 'Yes'
+    }else{
+        return 'No'
+    }
+}
+
+// ----------------------------------------------
+// As const and with arrow function:
+
+const boolToWord = bool => bool ? 'Yes' : 'No';
