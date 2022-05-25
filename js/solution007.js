@@ -25,3 +25,23 @@ function setAlarm(employed,vacation){
     }
 }
 // got it right on first attempt except had the return values in quotes. removed those and it worked. finally starting to get down syntax better
+
+//---------------------------------------------------------
+//Solutions I liked on solutions page: (all have good use of arrow functions, booleans, and/or turnary)
+//---------------------------------------------------------
+const setAlarm = (employed, vacation) => employed && !vacation;
+
+//---------------------------------------------------------
+function setAlarm(employed, vacation){
+    return employed && !vacation;
+}
+//---------------------------------------------------------
+function setAlarm(employed, vacation){
+    return (employed && !vacation) ? true : false;
+}
+//here the one above is much more clear than the one below
+//---------------------------------------------------------
+function setAlarm(employed, vacation){
+    return employed === true && vacation === false ? true : false
+    
+    }
