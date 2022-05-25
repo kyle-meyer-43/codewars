@@ -19,8 +19,9 @@
 
 function setAlarm(employed,vacation){
     if (employed === true && vacation === false){
-        return 'true'
+        return true
     }else{
-        return 'false'
+        return false
     }
 }
+// got it right on first attempt except had the return values in quotes. removed those and it worked. finally starting to get down syntax better
