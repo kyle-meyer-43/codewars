@@ -17,3 +17,10 @@
 //Pseudo Code
     // create function that takes in 2 variables. create conditional function that returns 'true' when employed is true and on vacation is false, otherwise return 'false'.
 
+function setAlarm(employed,vacation){
+    if (employed === true && vacation === false){
+        return 'true'
+    }else{
+        return 'false'
+    }
+}
