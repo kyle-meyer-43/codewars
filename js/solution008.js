@@ -21,3 +21,25 @@ function enough(cap, on, wait) {
     return (on + wait < cap) ? 0: dif
     }
     enough(10,5,5)
+
+
+//----------------------------------------------------
+//Alternate Solutions:
+
+// function enough(cap, on, wait) {
+//     return Math.max(wait + on - cap, 0);
+// }
+
+
+//As conditional:
+// function enough(cap, on, wait) {
+//     if (on + wait < cap){
+//     return 0;
+//     } else {
+//     return (on + wait) - cap;
+//     }
+//  } 
+
+
+// As clean arrow function:
+    // const enough = (cap, on, wait) => Math.max(0,wait-cap+on);
