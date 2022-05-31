@@ -17,3 +17,7 @@
 
 // psuedo code: Take in array, calculate average, compare to your score, return True or False depending on comparison. Need two separate functions? One to find average and 1 to compare against average?  
 
+function betterThanAverage(classPoints, yourPoints){
+    let a = classPoints.reduce((a,b) => a+b)/classPoints.length
+    return (yourPoints > a) ? true : false
+}
