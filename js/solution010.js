@@ -18,12 +18,16 @@
 //Create function that takes in an array and splits it up into negatives and postives. Use conditionals to put in the total number of postive ints in the array, and the sum of the negatives added into the second spot of array. Else condition to return the empty array if doesn't have req elements.
 
 
-function countPostivesAndSumNegatives(arr){
-   if (arr === null || !arr.length){
+function countPostivesSumNegatives(arr){
+
+   if (arr == null || !arr.length){
        return []
    } else{
-        let pos = arr.filter(a => a>0).length
-        let neg = arr.filter(a => a<0).reduce((a,b) => a+b)
+
+        let pos = arr.filter(a => a>0 ).length
+        
+        let neg = arr.filter(a => a<0 ).reduce((a,b) => a+b);
+        
         return [pos,neg]
    }  
 }
