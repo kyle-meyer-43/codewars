@@ -22,7 +22,7 @@ function countPostivesSumNegatives(arr){
 
    if (arr == null || !arr.length){
        return []
-   } else{
+   }else{
 
         let pos = arr.filter(a => a>0 ).length
         
