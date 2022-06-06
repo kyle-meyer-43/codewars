@@ -45,3 +45,28 @@ function switchItUp (number){
         return(text = 'Zero')
     }
 }
+
+//Alternate solutions and notes:
+    
+    //Way I did it was top result, but could have been cleaner without the breaks after each case. Also did not need to define number as a variable outside of the function.
+
+//Even cleaner as:
+function switchItUp(number) {
+    switch (number) {
+      case 0: return 'Zero';
+      case 1: return 'One';
+      case 2: return 'Two';
+      case 3: return 'Three';
+      case 4: return 'Four';
+      case 5: return 'Five';
+      case 6: return 'Six';
+      case 7: return 'Seven';
+      case 8: return 'Eight';
+      case 9: return 'Nine';
+    }
+  }
+
+//Or:
+function switchItUp(n){
+    return ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n]
+  }
