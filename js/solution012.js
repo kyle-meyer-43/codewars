@@ -11,3 +11,10 @@
 
 //Pseudo code: take in attempt, evaluate, return result of true or false of fulfilling requirements.
 
+
+//still need to add for if contains letters or other characters
+function validatePIN (pin) {
+    if  ((pin.length=== 4 || 6)){
+        return true
+    }else return false
+  }
