@@ -19,8 +19,14 @@ function rot13(message){
 let newString = ''
 // Change the letters in the inputted string to be 13 plus
 let alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklm'
+let alpha2 = alpha.toUpperCase()
 
+// make a for loop to walk thorugh our original string (message), change the character that you find to +13
 
-
+for (let i = 0; i < message.length; i++){
+    if(message[i] == alpha.indexOf(message[i])){
+        
+    }
+}
 
 }
