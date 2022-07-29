@@ -24,18 +24,19 @@ let alpha2 = alpha.toUpperCase()
 // make a for loop to walk thorugh our original string (message), change the character that you find to +13
 
 for (let i = 0; i < message.length; i++){
-    if (alpha.indexOf(message[i].toLowerCase()) === -1){ //determine if thing is special character
+    if (alpha.indexOf(message[i].toLowerCase()) === -1){ //determine if thing is special character. ignores it
         newString += message[i]
+        console.log('1'+ newString)
     continue
     }  
     if (message[i] == alpha[alpha.indexOf(message[i])]){    
         newString += alpha[alpha.indexOf(message[i+13])];
         continue  //will restart a for loop. The opposite of 'break'  Return is, as always, the end of code
-    }
+        console.log('2'+ newString)
     newString += alpha[alpha2.indexOf(message[i+13])]
-
+    console.log('3'+ newString)
     }
     return newString
 }
-
-//Other way I might try to do it: convert string to array. one item in array for each letter or number in string. 
+}
+//Other way I might try to do it: convert string to array. one item in array for each letter or number in string. then join them back together as the new string
