@@ -24,19 +24,48 @@ let alpha2 = alpha.toUpperCase()
 // make a for loop to walk thorugh our original string (message), change the character that you find to +13
 
 for (let i = 0; i < message.length; i++){
+    console.log( alpha[alpha.indexOf(message[i])+13])
     if (alpha.indexOf(message[i].toLowerCase()) === -1){ //determine if thing is special character. ignores it
         newString += message[i]
-        console.log('1'+ newString)
     continue
     }  
     if (message[i] == alpha[alpha.indexOf(message[i])]){    
-        newString += alpha[alpha.indexOf(message[i+13])];
-        continue  //will restart a for loop. The opposite of 'break'  Return is, as always, the end of code
-        console.log('2'+ newString)
-    newString += alpha[alpha2.indexOf(message[i+13])]
-    console.log('3'+ newString)
+        
+        newString += alpha[alpha.indexOf(message[i])+13];
+        continue  //will restart a for loop. The opposite of 'break;'  Return is, as always, the end of code
     }
+    newString += alpha2[alpha2.indexOf(message[i])+13]
+
+    }
+    //return the new string moved ahead by 13.
     return newString
 }
-}
 //Other way I might try to do it: convert string to array. one item in array for each letter or number in string. then join them back together as the new string
+
+
+//Alternate solutions:
+
+// function rot13(message){
+//     return message
+//       .split('')
+//       .map(char => {
+//         let code = char.charCodeAt(0)
+//         if(code >= 65 && code <= 77 || 
+//            code >= 97 && code <= 109){
+//           return String.fromCharCode(code + 13)
+//         } 
+//         else if (code >= 78 && code <= 90 || 
+//                  code >= 110 && code <= 122){
+//           return String.fromCharCode(code - 13)
+//         }
+//         return char
+//       })
+//       .join('')
+//   }
+
+//Another good alternate solution:
+
+// function rot13(message) {
+//     var abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+//     return message.replace(/[a-z]/gi, c => abc[abc.indexOf(c) + 13]);
+//   }
