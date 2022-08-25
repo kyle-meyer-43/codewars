@@ -15,20 +15,25 @@
 //E:
 
 //P: Make a function that takes in a string
-function cleanString(s){
-    //Grab the string and split it into individual characters ('a')
-    let array =s.split('')
-    array.forEach((val,i) => if(array[i+1] === '#'){
-        array.pop(val)
-    })
+const cleanString = s => {
+    
+    let ar = [];
+    for (let e of s){
 
-    for(i=0;i<=array.length;i++){
-        if(array[i+1] ==='#'){
-            array.pop(val)
-            console.log(array)
-        }
+        if(e !='#'){
+            ar.push(e)}
+            else if (e == '#'){
+                ar.pop() } console.log(ar)
+}
+        return ar.join('')
+    
     }
-    //Now it's an array. We want to map through
+            
+
+console.log(cleanString)
+
+//Grab the string and split it into individual characters ('a')   
+//Now it's an array. We want to map through
     //And say, does the character that coems after look like this? ####
     //if yes, pop off
     //if no, skip
@@ -36,4 +41,3 @@ function cleanString(s){
     //join the string
     //Return it.
 
-}
