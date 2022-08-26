@@ -62,3 +62,25 @@ function cleanString(s) {
     //join the string
     //Return it.
 
+//Alternate solutions
+function clean_string(s) {
+    const result = []
+    for (const c of s) {
+if (c === "#") {
+        result.pop()
+} else {
+        result.push(c)
+}
+    }
+    return result.join("")
+}
+
+
+clean_string = s => s.split('').reduce((r, e) => e == '#' ? r.slice(0, -1) : r + e, '');
+
+
+function cleanString(s) {
+    let result = [];
+    [...s].map((char) => (char === "#" ? result.pop() : result.push(char)));
+    return result.join("");
+}
